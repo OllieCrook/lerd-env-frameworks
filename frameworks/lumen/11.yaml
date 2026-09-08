@@ -81,8 +81,8 @@ env:
 composer: auto
 npm: false
 console: artisan
-# Run after a connection change: the cached configuration is built against the
-# old database and answers every request with an error.
+# Lumen caches no configuration and registers no optimize:clear, so flushing the
+# application cache is all there is to clear after a connection change.
 cache_command: cache:clear
 
 workers:
